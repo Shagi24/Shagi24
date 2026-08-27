@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 380" width="420" height="380">
+  <defs>
+    <style>
+      .label { font-family: 'JetBrains Mono', 'Courier New', monospace; font-size: 11px; fill: #c4b5fd; }
+      .val   { font-family: 'JetBrains Mono', 'Courier New', monospace; font-size: 9px;  fill: #7c3aed; font-weight: bold; }
+      .title { font-family: 'JetBrains Mono', 'Courier New', monospace; font-size: 12px; fill: #ede9fe; font-weight: bold; }
+    </style>
+  </defs>
+
+  <!-- background -->
+  <rect width="420" height="380" fill="#0d1117" rx="12"/>
+
+  <!-- title -->
+  <text x="210" y="28" text-anchor="middle" class="title">skill_radar.json</text>
+
+  <!-- radar grid lines (6 rings) -->
+  <g transform="translate(210,205)" opacity="0.18" stroke="#7c3aed" fill="none">
+    <!-- rings at 20,40,60,80,100% of radius=130 -->
+    <polygon points="0,-26 22.5,-13 22.5,13 0,26 -22.5,13 -22.5,-13" stroke-width="0.8"/>
+    <polygon points="0,-52 45,-26 45,26 0,52 -45,26 -45,-26" stroke-width="0.8"/>
+    <polygon points="0,-78 67.5,-39 67.5,39 0,78 -67.5,39 -67.5,-39" stroke-width="0.8"/>
+    <polygon points="0,-104 90,-52 90,52 0,104 -90,52 -90,-52" stroke-width="0.8"/>
+    <polygon points="0,-130 112.5,-65 112.5,65 0,130 -112.5,65 -112.5,-65" stroke-width="0.8"/>
+  </g>
+
+  <!-- axis lines -->
+  <g transform="translate(210,205)" stroke="#7c3aed" stroke-width="0.6" opacity="0.25">
+    <line x1="0" y1="0" x2="0" y2="-130"/>
+    <line x1="0" y1="0" x2="112.5" y2="-65"/>
+    <line x1="0" y1="0" x2="112.5" y2="65"/>
+    <line x1="0" y1="0" x2="0" y2="130"/>
+    <line x1="0" y1="0" x2="-112.5" y2="65"/>
+    <line x1="0" y1="0" x2="-112.5" y2="-65"/>
+  </g>
+
+  <!-- 
+    Axes (6): JS=88, React=82, CSS/GSAP=85, Node=70, MongoDB=60, DSA=55
+    radius = 130
+    angles: top=270°, then clockwise every 60°
+    270°=JS, 330°=React, 30°=CSS/GSAP, 90°=Node, 150°=MongoDB, 210°=DSA
+    
+    Point formula: x = r*cos(θ), y = r*sin(θ) where θ in radians
+    JS    (270°): x=0,        y=-130      * 0.88 = (0, -114.4)
+    React (330°): x=cos(330)*130*0.82 = 0.866*130*0.82 = 92.4, y=sin(330)*130*0.82=-0.5*130*0.82=-53.3
+    GSAP  (30°):  x=cos(30)*130*0.85  = 0.866*130*0.85 = 95.7, y=sin(30)*130*0.85=0.5*130*0.85=55.2
+    Node  (90°):  x=0,        y=130      * 0.70 = (0, 91)
+    Mongo (150°): x=cos(150)*130*0.60=-0.866*130*0.60=-67.5, y=sin(150)*130*0.60=0.5*130*0.60=39
+    DSA   (210°): x=cos(210)*130*0.55=-0.866*130*0.55=-61.9, y=sin(210)*130*0.55=-0.5*130*0.55=-35.75
+  -->
+
+  <!-- filled radar shape -->
+  <polygon
+    transform="translate(210,205)"
+    points="0,-114.4 92.4,-53.3 95.7,55.2 0,91 -67.5,39 -61.9,-35.75"
+    fill="#7c3aed" fill-opacity="0.18" stroke="#7c3aed" stroke-width="1.5" stroke-linejoin="round"
+  />
+
+  <!-- data dots -->
+  <g transform="translate(210,205)" fill="#7c3aed" stroke="#0d1117" stroke-width="1.5">
+    <circle cx="0"    cy="-114.4" r="3.5"/>
+    <circle cx="92.4" cy="-53.3"  r="3.5"/>
+    <circle cx="95.7" cy="55.2"   r="3.5"/>
+    <circle cx="0"    cy="91"     r="3.5"/>
+    <circle cx="-67.5" cy="39"   r="3.5"/>
+    <circle cx="-61.9" cy="-35.75" r="3.5"/>
+  </g>
+
+  <!-- labels -->
+  <!-- JS (top) -->
+  <text x="210" y="78" text-anchor="middle" class="label">JavaScript</text>
+  <text x="210" y="89" text-anchor="middle" class="val">88</text>
+
+  <!-- React (upper-right) -->
+  <text x="318" y="142" text-anchor="start" class="label">React</text>
+  <text x="318" y="153" text-anchor="start" class="val">82</text>
+
+  <!-- CSS/GSAP (lower-right) -->
+  <text x="320" y="268" text-anchor="start" class="label">CSS / GSAP</text>
+  <text x="320" y="279" text-anchor="start" class="val">85</text>
+
+  <!-- Node (bottom) -->
+  <text x="210" y="320" text-anchor="middle" class="label">Node / Express</text>
+  <text x="210" y="331" text-anchor="middle" class="val">70</text>
+
+  <!-- MongoDB (lower-left) -->
+  <text x="100" y="268" text-anchor="end" class="label">MongoDB</text>
+  <text x="100" y="279" text-anchor="end" class="val">60</text>
+
+  <!-- DSA (upper-left) -->
+  <text x="98" y="142" text-anchor="end" class="label">DSA</text>
+  <text x="98" y="153" text-anchor="end" class="val">55</text>
+</svg>
