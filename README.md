@@ -8,7 +8,7 @@
 
 <br/>
 
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=24&duration=2800&pause=900&color=7C3AED&center=true&vCenter=true&width=560&lines=Shagirth+%E2%80%94+Web+Developer;Frontend+that+moves,+backend+that+holds;Building+ContentForge+%F0%9F%8C%80" alt="typing banner">
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=24&duration=2800&pause=900&color=7C3AED&center=true&vCenter=true&width=560&lines=S.Shagirth;Frontend+that+moves,+backend+that+holds" alt="typing banner">
 
 <br/>
 
@@ -43,7 +43,7 @@ Hey, I'm **Shagirth** — a web developer who obsesses over the gap between func
 - Building **[ContentForge](https://github.com/Shagi24)** — AI-powered recording-to-content pipeline, for IDEALIZE 2026
 - Frontend-first: **GSAP, Lenis, React** — things that feel as good as they look
 - Backend growing: **Node/Express + MongoDB** — enough to ship full products
-  
+- Part of **The Unknowns** — a competition team that actually competes
 
 ---
 
