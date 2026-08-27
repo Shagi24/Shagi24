@@ -43,7 +43,7 @@ Hey, I'm **Shagirth** — a web developer who obsesses over the gap between func
 - Building **[ContentForge](https://github.com/Shagi24)** — AI-powered recording-to-content pipeline, for IDEALIZE 2026
 - Frontend-first: **GSAP, Lenis, React** — things that feel as good as they look
 - Backend growing: **Node/Express + MongoDB** — enough to ship full products
-- Part of **The Unknowns** — a competition team that actually competes
+  
 
 ---
 
